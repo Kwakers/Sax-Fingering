@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background : url("background.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#iosHeader{
+	height:20px;
+	width:100%;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.4);
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#fingeringsView path {
+	display: block;
+	fill: transparent;
+	fill-opacity: 1;
+	stroke: white;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-opacity: 0.8;
+	stroke-width: 1;
+
+}
+
+#fingeringsView .never,#fingeringsView .never path {
+  display:none;
+  fill-opacity:0!important;
+  stroke-opacity:0!important
+}
+
+#fingeringsView .active, #fingeringsView .active path {
+	display: block;
+	fill: white;
+	fill-opacity: 1 !important;
+	stroke-opacity: 1 !important;
+}
+
+
+#fingeringsView
+{
+	width: 100%;
+}
+
+#fingeringsHeader, 
+#fingeringsFooter
+{
+	margin: 8px 0px;
+	width: 100%;
+}
+
+#fingeringsHeader
+{
+	text-align: center;
+}
+
+
+
+
+#fingeringSVGContainer
+{
+	display: block;
+	height: 340px;
+	position: relative;
+	width: 100%;
+}
+
+#fingeringSVG
+{
+	margin:auto;
+	display:block;
+	width: 100%;
+	height: 340px;
+}
+
+
+#fingeringSVG path
+{
+	-ms-transform: scale(0.67) translateX(-7px);
+    -webkit-transform: scale(0.67) translateX(-7px);
+	transform: scale(0.67) translateX(-7px);
+}
+
+#fingeringsHeader #previousFingering,
+#fingeringsHeader #nextFingering
+{
+	 display: inline-block;
+}
+
+#fingeringsHeader span.dropdownToolbarButton
+{
+	display: inline-block;
+	float:left;
+}
+
+#fingeringIndex
+{
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+#fingeringIndex ul {
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+}
+
+#fingeringIndex li
+{
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: rgba(130, 130, 130, 0.5);
+	border-image: none;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color:white;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 0;
+	height: 10px;
+	line-height: 0;
+	list-style: outside none none;
+	margin: 2px;
+	padding: 0;
+	text-align: center;
+	vertical-align: 10px;
+	width: 10px;
+}
+
+
+#fingeringsHeader #previousFingering:before
+{
+  content: url("toolbarButton-pageLeft.png");
+}
+
+#fingeringsHeader #nextFingering:before
+{
+  content: url("toolbarButton-pageRight.png");
+}
+
+#fingeringsNotesContainer
+{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+#fingeringsHeader .notes {
+	padding: 0;
+	position: relative;
+	text-align: center;
+	z-index: 100;
+	display: inline-block;
+}
+#fingeringsHeader .notes li {
+	display: inline-block;
+	list-style: outside none none;
+	position: relative;
+	top: 3px;
+	font-size: 13px;
+}
+
+#fingeringIndex li.selected
+{
+	background: white;
+}
+
+#fingeringsHeader .notes li p {
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0 8px;
+	text-transform: uppercase;
+}
+
+#fingeringsHeader .notes li p span {
+	display: block;
+	font-size: 0.6rem;
+	line-height: 17px;
+	position: relative;
+	top: -1px;
+	vertical-align: middle;
+}
+
+#fingeringsHeader .notes li p.selected, #fingeringsHeader .notes li p:hover {
+    color: #ccc;
+}
+
+#fingeringsHeader .notes li:after {
+    color: rgba(255, 255, 255, 0.1);
+    content: "·";
+    display: inline-block;
+}
+
+#fingeringsHeader .notes li:last-child:after {
+    content: "  ";
+}
+
+#fingeringsHeader .notes li.active p {
+    color: #ccc;
+}
+
+
+
+.comments
+{
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.4);
+	bottom: 0;
+	color: #24241a;
+	font-size: 14px;
+	line-height: 15px;
+	padding: 3px 0px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+
+.select-style {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0;
+	width: 65px;
+}
+
+.select-style select {
+	-moz-appearance: none;
+	background-color: transparent;
+	background-image: none;
+	border: medium none;
+	box-shadow: none;
+	font-size: 14px;
+	padding: 5px 0 5px 20px;
+	width: 65px;
+}
+
+.select-style select:focus {
+	outline: none;
+}
